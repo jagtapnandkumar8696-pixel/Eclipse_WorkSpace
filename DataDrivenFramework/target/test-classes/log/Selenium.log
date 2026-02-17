@@ -1,0 +1,11 @@
+2026-02-02 11:59:25 INFO  devpinoyLogger:136 - Config file loaded
+2026-02-02 11:59:25 DEBUG devpinoyLogger:145 - OR file loaded
+2026-02-02 11:59:25 DEBUG WebDriverManager:226 - Using WebDriverManager 5.7.0
+2026-02-02 11:59:25 DEBUG ResolutionCache:186 - Resolution chrome=144 in cache (valid until 12:03:31 02/02/2026 IST)
+2026-02-02 11:59:25 DEBUG ResolutionCache:186 - Resolution chrome144=144.0.7559.109 in cache (valid until 11:03:31 03/02/2026 IST)
+2026-02-02 11:59:25 INFO  WebDriverManager:1219 - Using chromedriver 144.0.7559.109 (resolved driver for Chrome 144)
+2026-02-02 11:59:25 DEBUG WebDriverManager:1178 - Driver chromedriver 144.0.7559.109 found in cache
+2026-02-02 11:59:25 INFO  WebDriverManager:1281 - Exporting webdriver.chrome.driver as C:\Users\NANDKUMAR JAGTAP\.cache\selenium\chromedriver\win64\144.0.7559.109\chromedriver.exe
+2026-02-02 11:59:28 DEBUG devpinoyLogger:154 - Chrome launched
+2026-02-02 11:59:32 DEBUG devpinoyLogger:16 - Execution started
+2026-02-02 11:59:35 DEBUG devpinoyLogger:187 - Execution completed

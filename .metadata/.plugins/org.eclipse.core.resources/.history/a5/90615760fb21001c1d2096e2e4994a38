@@ -1,0 +1,69 @@
+package crg.API;
+
+import java.util.ArrayList;
+
+import org.json.JSONObject;
+import org.testng.Assert;
+import org.testng.annotations.Test;
+
+import io.restassured.RestAssured;
+import io.restassured.http.Method;
+import io.restassured.response.Response;
+import io.restassured.specification.RequestSpecification;
+
+
+@Test
+public class FirstAPITest {
+	public ArrayList ar;
+	public void empid()
+	{
+		//test(2);
+		
+		test(2);
+		Object s=ar.get(0);
+		System.out.println(s);
+		Object s1=ar.get(1);
+		System.out.println(s1);
+		Assert.assertEquals(s1, 200);
+		
+		
+	}
+	
+	public  ArrayList test(int id)
+	{    Response sr=RestAssured.get("https://reqres.in/api/users/"+id);
+	
+		String str=sr.asString();
+		
+		int a=sr.getStatusCode();
+		 ar=new ArrayList();
+		ar.add(str);
+		ar.add(a);
+		return ar;
+		
+	}
+	@Test
+	public void test1()
+	{
+		RequestSpecification request=RestAssured.given();
+				
+		/*{
+		    "name": "morpheus",
+		    "job": "leader"
+		}*/
+		
+		JSONObject reqParameter= new JSONObject();
+		reqParameter.put("name", "abhijeet2");
+		reqParameter.put("job", "Tester2");
+		request.body(reqParameter.toString());
+		
+		Response Response=request.post("https://reqres.in/api/users");
+		//JSONObject responseJson=new JSONObject(Response);
+		
+		//Response st=RestAssured.post("https://reqres.in/api/users");
+		int a=Response.getStatusCode();
+		System.out.println("StatusCode is ="+a);
+		String s=Response.asString();
+		System.out.println("Response Data="+s);
+	
+	}
+}

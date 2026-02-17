@@ -1,0 +1,19 @@
+package api.RahulSheety;
+
+import io.restassured.RestAssured;
+import io.restassured.response.Response;
+import io.restassured.specification.RequestSpecification;
+
+public class PutMethod extends UpdateBody{
+	
+	public void updateMethod()
+	{
+		RestAssured.baseURI="https://rahulshettyacademy.com";
+		RequestSpecification request= RestAssured.given();
+		request.header("Content-Type","application/json");
+		request.queryParam("key", "qaclick123");
+		request.body(updateBody());
+		Response respons=request.post("maps/api/place/add/json");
+	}
+
+}

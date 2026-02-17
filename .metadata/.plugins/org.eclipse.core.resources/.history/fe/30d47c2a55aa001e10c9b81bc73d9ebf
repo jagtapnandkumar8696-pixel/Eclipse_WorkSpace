@@ -1,0 +1,15 @@
+package JavaBasic;
+
+public class PrintMethod {
+	public static void main(String[] args) 
+	{
+		int a=5;
+		int b=3;
+		int d = 12; 
+		byte c=(byte)d;
+		System.out.println(a+5);
+		System.out.println(c);
+		
+	}
+
+}

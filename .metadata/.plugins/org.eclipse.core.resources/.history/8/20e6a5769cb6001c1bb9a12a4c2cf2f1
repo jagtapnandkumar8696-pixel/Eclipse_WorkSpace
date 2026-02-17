@@ -1,0 +1,19 @@
+package Array;
+
+public class EvenOdd_numbers {
+
+	public static void main(String[] args) {
+		int a[]= {12,16,44,86,83,76,38,90,45,34,67,83};
+		
+		
+		for(int i:a)
+		{
+			if(i%2==0)
+			{
+	            System.out.println(i+""+"Even");
+			}
+		}
+
+	}
+
+}

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite thread-count="-1" name="Failed suite [Listener]" guice-stage="DEVELOPMENT">
+  <listeners>
+    <listener class-name="testngListeners.Listeners"/>
+    <listener class-name="org.uncommons.reportng.HTMLReporter"/>
+  </listeners>
+  <test name="Test(failed)">
+    <classes>
+      <class name="testngListeners.TestFailForlistner">
+        <methods>
+          <include name="login"/>
+        </methods>
+      </class> <!-- testngListeners.TestFailForlistner -->
+      <class name="testng.TestFailForlistner">
+        <methods>
+          <include name="login"/>
+        </methods>
+      </class> <!-- testng.TestFailForlistner -->
+    </classes>
+  </test> <!-- Test(failed) -->
+</suite> <!-- Failed suite [Listener] -->

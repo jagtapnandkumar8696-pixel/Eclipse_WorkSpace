@@ -1,0 +1,24 @@
+package crg.API;
+
+import org.testng.annotations.Test;
+
+import io.restassured.RestAssured;
+import io.restassured.http.Method;
+import io.restassured.response.Response;
+import io.restassured.specification.RequestSpecification;
+
+
+@Test
+public class FirstAPITest {
+	public void empid()
+	{
+		test(2);
+	}
+	@Test
+	public  void test(int id)
+	{    Response sr=RestAssured.get("https://reqres.in/api/users/"+id);
+		String str=sr.asString();
+		System.out.println(str);
+	}
+
+}

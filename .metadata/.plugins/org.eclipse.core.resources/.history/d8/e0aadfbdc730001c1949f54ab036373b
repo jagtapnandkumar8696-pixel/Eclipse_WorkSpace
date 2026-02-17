@@ -1,0 +1,51 @@
+package api.RahulSheety;
+
+import org.json.JSONObject;
+import org.testng.Assert;
+import org.testng.annotations.Test;
+
+import groovy.json.JsonDelegate;
+import io.restassured.RestAssured;
+import io.restassured.response.Response;
+import io.restassured.specification.RequestSpecification;
+
+public class PostMethod  extends PostBody{
+	@Test
+	public void post()
+	{
+	RestAssured.baseURI="https://rahulshettyacademy.com";
+	RequestSpecification request=RestAssured.given();
+	request.header("Content-Type","application/json");
+	request.queryParam("key", "qaclick123");
+	request.body(bodynew());
+	Response respons=request.post("maps/api/place/add/json");
+	//Response respons=RestAssured.post("maps/api/place/add/json");
+	String str=respons.asString();
+	System.out.println("Response is "+str);
+	JSONObject jso=new JSONObject(str);
+	String actual=(String) jso.get("status");
+	System.out.println("Status is "+actual);
+	String expected="OK";
+	Assert.assertEquals(actual, expected,"Executed");
+	String place_id=(String) jso.get("place_id");
+	System.out.println(place_id);
+	
+	String newAddress = "Summer Walk, Africa";
+
+    request.header("Content-Type","application/json");
+    request.queryParam("key", "qaclick123");
+    request.body(updateBody());
+    request.body("{\r\n" +
+      "\"place_id\":\""+place_id+"\",\r\n" +
+      "\"address\":\""+newAddress+"\",\r\n" +
+      "\"key\":\"qaclick123\"\r\n" +
+      "}");
+    Response GetResponseUpdate = request.put("maps/api/place/update/json");
+    System.out.println(GetResponseUpdate.getStatusCode());
+    System.out.println("Put Response="+GetResponseUpdate.asString());
+	
+	}
+	
+	
+
+}

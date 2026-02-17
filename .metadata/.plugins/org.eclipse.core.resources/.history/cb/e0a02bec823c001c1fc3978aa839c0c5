@@ -1,0 +1,10 @@
+package constroctor;
+
+public class ParametrisedCons {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

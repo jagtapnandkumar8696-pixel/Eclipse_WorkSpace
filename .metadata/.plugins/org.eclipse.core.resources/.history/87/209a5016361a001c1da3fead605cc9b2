@@ -1,0 +1,6 @@
+package roughWork;
+
+public class Login extends BaseClass{
+	driver.findElement(By.cssSelector(or.getProperty("bmlButton"))).click();
+
+}

@@ -1,0 +1,28 @@
+package contructor;
+
+public class ContructorChaining {
+	  public ContructorChaining(int a)
+	  {
+		  System.out.println("Parent constructor with Value "+a);
+	  }
+	  public class ContructorChaining_sub extends ContructorChaining
+	  {
+
+		public   ContructorChaining_sub()
+		  {	
+			  this(4);
+		  }
+		  
+		public ContructorChaining_sub(int a) {
+			super(a);
+			System.out.println("child contructor with value "+a);
+			
+			// TODO Auto-generated constructor stub
+		}
+		  
+	  }
+	public static void main(String[] args) {
+	
+	}
+
+}

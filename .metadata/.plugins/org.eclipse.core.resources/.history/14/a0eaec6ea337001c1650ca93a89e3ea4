@@ -1,0 +1,12 @@
+package String;
+
+public class StrinFUnctions {
+
+	public static void main(String[] args) {
+		String str="Nandkumar Jagtap Pune CRG";
+		System.out.println(str.replace('w', 'D'));//replace all occorance of characters
+		System.out.println(str.replace(str, "Test"));//replace whol string 
+		System.out.println(str.replaceAll("Nandkumar", "Vedika"));
+	}
+
+}

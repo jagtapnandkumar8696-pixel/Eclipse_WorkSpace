@@ -1,0 +1,10 @@
+package job.ControlSructure;
+
+public class IfElse_Ladder_Example2 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

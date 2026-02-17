@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename type &apos;Practies.ReadingXlxs&apos; to &apos;ReadingExcelFile&apos;&#x0D;&#x0A;- Original project: &apos;Amol Sir -Class&apos;&#x0D;&#x0A;- Original element: &apos;Practies.ReadingXlxs&apos;&#x0D;&#x0A;- Renamed element: &apos;Practies.ReadingExcelFile&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" description="Rename type &apos;ReadingXlxs&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.type" input="/src&lt;Practies{ReadingXlxs.java[ReadingXlxs" matchStrategy="1" name="ReadingExcelFile" qualified="false" references="true" similarDeclarations="false" stamp="1632318707246" textual="false" version="1.0"/>
+</session>

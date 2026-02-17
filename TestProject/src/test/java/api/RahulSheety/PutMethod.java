@@ -1,0 +1,30 @@
+package api.RahulSheety;
+
+import org.json.JSONObject;
+import org.testng.annotations.Test;
+
+import io.restassured.RestAssured;
+import io.restassured.response.Response;
+import io.restassured.specification.RequestSpecification;
+
+public class PutMethod extends UpdateBody{
+	@Test
+	public void updateMethod()
+	{
+		RestAssured.baseURI="https://rahulshettyacademy.com";
+		RequestSpecification request= RestAssured.given();
+		request.header("Content-Type","application/json");
+		request.queryParam("key", "qaclick123");
+		request.body(updateBody());
+		Response respons=request.put("maps/api/place/add/json");
+		int status_code=respons.getStatusCode();
+		System.out.println("Put Status code is "+status_code);
+		String str=respons.toString();
+		System.out.println("Put Method Response="+str);
+		JSONObject jso=new JSONObject(str);
+		String id=(String) jso.get("place_id");
+		System.out.println("Place Id="+id);
+		
+	}
+
+}

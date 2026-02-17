@@ -1,0 +1,18 @@
+package job.ControlSructure;
+
+public class If_Loop {
+
+	public static void main(String[] args) {
+
+     
+		int a=4;
+		String str="Test";
+		if (a==4)
+		{
+			System.out.println(str);
+			++a;
+		}
+         System.out.println(a);
+	}
+
+}

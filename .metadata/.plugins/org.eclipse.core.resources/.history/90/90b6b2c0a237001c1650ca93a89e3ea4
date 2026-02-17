@@ -1,0 +1,11 @@
+package String;
+
+public class StrinFUnctions {
+
+	public static void main(String[] args) {
+		String str="Nandkumar Jagtap Pund CRG";
+		System.out.println(str.replace('w', 'D'));//replace all occorance of characters
+		System.out.println();
+	}
+
+}

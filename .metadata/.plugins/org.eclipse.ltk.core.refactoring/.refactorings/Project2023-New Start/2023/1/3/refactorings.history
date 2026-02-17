@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename type &apos;Loops.Switch_case2&apos; to &apos;Practis&apos;&#x0D;&#x0A;- Original project: &apos;Project2023-New Start&apos;&#x0D;&#x0A;- Original element: &apos;Loops.Switch_case2&apos;&#x0D;&#x0A;- Renamed element: &apos;Loops.Practis&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" description="Rename type &apos;Switch_case2&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.type" input="/src&lt;Loops{Switch_case2.java[Switch_case2" matchStrategy="1" name="Practis" qualified="false" references="true" similarDeclarations="false" stamp="1673968826099" textual="false" version="1.0"/>
+</session>

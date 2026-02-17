@@ -1,0 +1,21 @@
+package constroctor;
+
+public class ParametrisedCons {
+	int b=5;
+	
+	ParametrisedCons(int a,String str)
+	{
+		 b=a;
+		 a=8;
+		System.out.println(a);
+		System.out.println(str);
+		System.out.println(b);
+	}
+
+	public static void main(String[] args) {
+		ParametrisedCons ob=new ParametrisedCons(1, "Testing");
+		System.out.println(ob.b);
+      
+	}
+
+}

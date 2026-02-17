@@ -1,0 +1,56 @@
+package contructor;
+
+
+
+	// other class using super() keyword
+	 class ConstructorWithSuper
+	{
+	    String name;
+	 
+	    // constructor 1
+	    ConstructorWithSuper()
+	    {
+	      //  this("");
+	        System.out.println("No-argument constructor of" +
+	                                           " base class");
+	    }
+	 
+	    // constructor 2
+	    ConstructorWithSuper(String name)
+	    {
+	        this.name = name;
+	        System.out.println("Calling parameterized constructor"
+	                                              + " of base");
+	    }
+	}
+	 
+	 class Derived extends ConstructorWithSuper
+	{
+	    // constructor 3
+	    Derived()
+	    {  super();
+	        System.out.println("No-argument constructor " +
+	                           "of derived");
+	      
+	    }
+	 
+	    // parameterized constructor 4
+	    Derived(String name)
+	    {
+	        // invokes base class constructor 2
+	        super(name);
+	        System.out.println("Calling parameterized " +
+	                           "constructor of derived");
+	    }
+	 
+	    public static void main(String args[])
+	    {
+	        // calls parameterized constructor 4
+	        Derived obj = new Derived("test");
+	 
+	        // Calls No-argument constructor
+	         Derived obj1= new Derived();
+	    }
+	}
+
+

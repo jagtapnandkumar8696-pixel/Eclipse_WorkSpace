@@ -1,0 +1,53 @@
+package crg.API;
+
+import java.util.ArrayList;
+
+import org.testng.Assert;
+import org.testng.annotations.Test;
+
+import io.restassured.RestAssured;
+import io.restassured.http.Method;
+import io.restassured.response.Response;
+import io.restassured.specification.RequestSpecification;
+
+
+@Test
+public class FirstAPITest {
+	public ArrayList ar;
+	public void empid()
+	{
+		//test(2);
+		
+		test(2);
+		Object s=ar.get(0);
+		System.out.println(s);
+		Object s1=ar.get(1);
+		System.out.println(s1);
+		Assert.assertEquals(s1, 200);
+		
+		
+	}
+	
+	public  ArrayList test(int id)
+	{    Response sr=RestAssured.get("https://reqres.in/api/users/"+id);
+	
+		String str=sr.asString();
+		
+		int a=sr.getStatusCode();
+		 ar=new ArrayList();
+		ar.add(str);
+		ar.add(a);
+		return ar;
+		
+	}
+	@Test
+	public void test1()
+	{
+		Response st=RestAssured.post("https://reqres.in/api/users");
+		int a=st.getStatusCode();
+		System.out.println(a);
+		String s=st.toString()
+		System.out.println(s);
+	}
+
+}

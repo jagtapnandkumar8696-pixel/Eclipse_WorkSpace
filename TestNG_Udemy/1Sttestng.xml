@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+  <test  name="First Test">
+    <classes>
+    
+      <class name="testng.FirstTest"/>
+    </classes>
+  </test> <!-- Test -->
+  
+  
+  <test  name="Assertion Test">
+    <classes>
+    
+      <class name="testng.Assersion"/>
+    </classes>
+    
+  </test> <!-- Test -->
+  
+  
+  <test  name="Soft Assert"> 
+    <classes>
+    
+      <class name="testng.SoftAssertTest"/>
+    </classes>
+  </test> <!-- Test -->
+  
+  
+  <test  name="Dependancy test">
+    <classes>
+    
+      <class name="testng.TestDependancy"/>
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->

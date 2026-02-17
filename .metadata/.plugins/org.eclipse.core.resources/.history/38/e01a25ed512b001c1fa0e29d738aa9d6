@@ -1,0 +1,19 @@
+package api.RahulSheety;
+
+import groovy.json.JsonDelegate;
+import io.restassured.RestAssured;
+import io.restassured.specification.RequestSpecification;
+
+public class PostMethod  extends PostBody{
+	
+	public void post()
+	{
+	RestAssured.baseURI="https://rahulshettyacademy.com";
+	RequestSpecification request=RestAssured.given();
+	request.header("Content-Type","application/json");
+	request.queryParam("key", "qaclick123");
+	request.body()
+	}
+	
+
+}

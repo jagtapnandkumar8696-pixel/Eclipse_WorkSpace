@@ -1,0 +1,34 @@
+package crg.NewAPI;
+
+import org.json.JSONArray;
+import org.json.JSONObject;
+import org.testng.annotations.Test;
+
+import io.restassured.RestAssured;
+import io.restassured.response.Response;
+
+public class GetRequest {
+	@Test
+	 public void getRequestTest()
+	 {
+		 Response resTest=RestAssured.get("https://fakerestapi.azurewebsites.net/api/v1/Activities");
+
+		 String StrVer=resTest.asString();
+		 System.out.println("Azure_GetActivity="+StrVer);
+		 int statusCode=resTest.getStatusCode();
+		 System.out.println("Status Code ="+statusCode);
+
+		 JSONArray RessJSON=new JSONArray(StrVer);
+		 System.out.println("Length="+RessJSON.length());
+		 
+		 
+
+		 JSONObject stOBJ=(JSONObject) RessJSON.get(0);
+
+
+		 System.out.println("id-"+stOBJ.get("id"));
+	 }
+	
+	
+
+}

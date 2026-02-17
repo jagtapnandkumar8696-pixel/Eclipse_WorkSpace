@@ -1,0 +1,11 @@
+package String;
+
+public class StringFunction2 {
+
+	public static void main(String[] args) {
+		String str="Nandkumar jagtap";
+		System.out.println(str.isEmpty());//Is Empty
+		System.out.println(str.codePointAt(0));
+	}
+
+}

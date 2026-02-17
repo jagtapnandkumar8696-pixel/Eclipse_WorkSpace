@@ -1,0 +1,35 @@
+package job.ControlSructure;
+
+public class IfElse_Ladder_Example2 {
+
+	public static void main(String[] args) {
+		int a=100;
+		int b=40,c=60;
+		
+		if(a+b+c!=180)
+		{
+			System.out.println("it is not triangle");
+		}
+		
+		else if(a==90|| b==90||c==90)
+	  {
+			System.out.println("it is Right angle triangle");
+	  }
+		
+		else if(a==60 && b==60 && c==60)
+		  {
+				System.out.println("it is Eqilateral  triangle");
+		  }
+		else if(a!=b && b!=c && a!=c)
+		  {
+				System.out.println("it is Scalene  triangle");
+		  }
+		
+		else
+		{
+			System.out.println("it is Isocales  triangle");
+		}
+
+	}
+
+}

@@ -1,0 +1,44 @@
+package testng;
+
+import org.testng.Assert;
+import org.testng.annotations.Test;
+
+public class GroupingTest {
+	@Test (priority=1,groups="Module test")
+	public void userregistration()
+	{
+		System.out.println("User registered");
+		//Assert.fail();
+		//test get fail
+	}
+	
+	
+	@Test(priority=2,dependsOnMethods="userregistration",groups="Login test")
+	public void login()
+	{
+		System.out.println("User logged in ");
+		//if userregistration method fails ..login get skip as it is depends on userregistration
+	}
+	
+	
+	@Test(priority=3,dependsOnMethods="userregistration",alwaysRun=true,groups="functinal Test")
+	public void registerAgain ()
+	{
+		System.out.println("User registered  again ");
+		//if userregistration method fails ..registeragain method not get skip even though it si dependent...but alwaysrun=true 
+	}
+	
+	@Test(priority=4,groups= {"Smoke Test","functinal Test"})
+	public void independentMethod ()
+	{
+		System.out.println("Method is independent  ");
+		
+	}
+	@Test(priority=4)
+	public void nogroup ()
+	{
+		System.out.println("Method is not belongs to any group  ");
+		
+	}
+
+}

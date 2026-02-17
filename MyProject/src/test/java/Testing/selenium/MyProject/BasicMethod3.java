@@ -1,0 +1,35 @@
+package Testing.selenium.MyProject;
+
+import java.awt.Point;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+//import io.github.bonigarcia.wdm.WebDriverManager;
+
+public class BasicMethod3 {
+
+	public static void main(String[] args) {
+		//WebDriverManager.chromedriver().setup();
+		WebDriver driver=new ChromeDriver();
+		driver.get("https://www.sugarcrm.com/au/request-demo/");
+		driver.manage().window().maximize();
+	//	String str=driver.findElement(By.name("firstname")).getAttribute("class");
+	//	System.out.println(str);
+		//take text -transform from style section afetr inpect element
+		String str1 =driver.findElement(By.xpath("//*[@id=\"field1\"]/div/input")).getCssValue("text-transform");
+		System.out.println(str1);
+		System.out.println(driver.findElement(By.xpath("//*[@id=\"field1\"]/div/input")).getSize());
+		System.out.println(driver.findElement(By.xpath("//*[@id=\"field1\"]/div/input")).getLocation());
+		System.out.println(driver.findElement(By.xpath("//*[@id=\"field1\"]/div/input")).getText());
+		System.out.println(driver.findElement(By.xpath("//*[@id=\"field1\"]/div/input")).getTagName());
+		System.out.println(driver.findElement(By.xpath("//*[@id=\"field1\"]/div/input")).getAttribute("class"));
+		System.out.println(driver.findElement(By.xpath("//*[@id=\"field1\"]/div/input")).isDisplayed());
+		System.out.println(driver.findElement(By.xpath("//*[@id=\"field1\"]/div/input")).isEnabled());
+		System.out.println(driver.findElement(By.xpath("//*[@id=\"field1\"]/div/input")).isSelected());
+	//org.openqa.selenium.Point str1=	driver.findElement(By.className("element-container my-2 btn btn-primary")).getLocation();
+		//System.out.println(str1);
+	}
+
+}

@@ -1,0 +1,14 @@
+package testCase;
+
+import org.openqa.selenium.By;
+
+import testBase.BaseClass;
+
+public class Login extends BaseClass{
+
+	public void login()
+	{
+		driver.findElement(By.cssSelector(or.getProperty("bmlButton"))).click();
+	}
+}
+

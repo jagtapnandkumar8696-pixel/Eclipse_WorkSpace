@@ -1,0 +1,18 @@
+package testCase;
+
+import org.openqa.selenium.By;
+//import org.testng.annotations.Test;
+import org.testng.annotations.Test;
+
+import testBase.BaseClass;
+
+public class Login extends BaseClass{
+ @Test
+	public void login() throws InterruptedException
+	{
+	 System.out.println("test123");
+	 driver.findElement(By.cssSelector(or.getProperty("bmlButton"))).click();
+		Thread.sleep(2000);
+	}
+}
+

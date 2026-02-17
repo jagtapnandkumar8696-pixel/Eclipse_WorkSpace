@@ -1,0 +1,15 @@
+package contructor;
+
+public class COntructor1 {
+	int a;
+	String str;
+	COntructor1()
+	{
+		System.out.println(a+"  "+str);
+	}
+	public static void main(String[] args) {
+		COntructor1 c=new COntructor1();
+
+	}
+
+}

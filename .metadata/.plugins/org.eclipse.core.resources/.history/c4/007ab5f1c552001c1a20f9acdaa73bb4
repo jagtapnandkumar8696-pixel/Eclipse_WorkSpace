@@ -1,0 +1,44 @@
+package dataProvider;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.annotations.Test;
+
+import io.github.bonigarcia.wdm.WebDriverManager;
+
+public class DataProvider {
+	@Test
+public void getData(String userName,String passwr)
+{
+	WebDriverManager.chromedriver().setup();
+	WebDriver driver=new ChromeDriver();
+	driver.get("http://stock.scriptinglogic.net/");
+	driver.manage().window().maximize();
+	driver.findElement(By.id("login-username")).sendKeys(userName);
+	driver.findElement(By.id("login-password")).sendKeys(passwr);
+	driver.findElement(By.name("submit")).click();
+}
+	public Object setData()
+	{
+		Object data[][]=new Object[4][2];	
+		
+		
+		 data[0][0] = "admin";
+	        data[0][1] = "admin";
+
+	        data[1][0] = "amol";
+	        data[1][1] = "amol123";
+
+	        data[2][0] = "deepa";
+	        data[2][1] = "deepa123";
+
+	        data[3][0] = "amar";
+	        data[3][1] = "amar123";
+
+	        return data;
+
+				}
+	}
+
+

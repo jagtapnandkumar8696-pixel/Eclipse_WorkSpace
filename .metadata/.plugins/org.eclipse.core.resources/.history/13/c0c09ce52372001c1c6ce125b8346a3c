@@ -1,0 +1,41 @@
+package constroctor;
+
+public class Constrocter2 {
+	
+	int a=10;
+	double b;
+	String str;
+	
+	Constrocter2()
+	{
+		a=1;
+		b=1.2;
+		str="test";
+	
+	}
+	int Constrocter2()
+	{
+		a=1;
+		b=1.3;
+		str="test";
+		return a;
+	
+	}
+	void display()
+	{
+		System.out.println(a);
+		System.out.println(b);
+	}
+	
+	
+
+	public static void main(String[] args) {
+		
+		Constrocter2 c=new Constrocter2();
+		c.a=5;
+		c.Constrocter2();
+		c.display();
+
+	}
+
+}

@@ -1,0 +1,16 @@
+package api.RahulSheety;
+
+import io.restassured.RestAssured;
+import io.restassured.specification.RequestSpecification;
+
+public class PutMethod {
+	
+	public void updateMethod()
+	{
+		RestAssured.baseURI="https://rahulshettyacademy.com";
+		RequestSpecification request= RestAssured.given();
+		request.header("Content-Type","application/json");
+		request.queryParam("key", "qaclick123");
+	}
+
+}

@@ -1,0 +1,31 @@
+package constroctor;
+
+import classNadAccessModifier.Class1;
+
+public class Constroctor1 {
+
+	int a;
+	String s;
+	static char ch;
+	 Constroctor1()
+	{
+		a=101;
+		s="Nandu";
+	}
+ void display()
+ {   a=12;
+	 System.out.println("A is "+a);
+	
+	 System.out.println("S is "+s);
+ }
+	public static void main(String[] args) {
+		
+		Constroctor1 c=new Constroctor1();
+		
+		c.display();
+				
+		);
+	}
+
+
+}

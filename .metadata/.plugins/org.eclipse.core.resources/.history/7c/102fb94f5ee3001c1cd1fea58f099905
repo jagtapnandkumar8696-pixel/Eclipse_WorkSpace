@@ -1,0 +1,28 @@
+package Loops;
+
+public class If_Else_Loop {
+
+	public static void main(String[] args) {
+		int a=60,b=60,c=60;
+	if(a+b+c==180)
+	{
+		if(a==b && b==c)
+		{
+			System.out.println("Tringale is equilateral Triangle");
+		}
+		
+		else if((a==45 && b==45) || (b==45 && c==45)|| (a==45 && c==45)) 
+		{
+			System.out.println("Triangle is 90 angle tariangle");
+		}
+		
+		
+	}
+	else
+	{
+		System.out.println("Not a Triangle");
+	}
+
+	}
+
+}

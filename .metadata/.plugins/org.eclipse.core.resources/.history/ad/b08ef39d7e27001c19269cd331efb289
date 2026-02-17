@@ -1,0 +1,47 @@
+package crg.NewAPI;
+
+import org.json.JSONArray;
+import org.json.JSONObject;
+import org.testng.Assert;
+import org.testng.annotations.Test;
+
+import io.restassured.RestAssured;
+import io.restassured.response.Response;
+
+public class TestGetCommand {
+	@Test
+	public void getRequestTest()
+	 {
+		 Response resTest=RestAssured.get("https://fakerestapi.azurewebsites.net/api/v1/Activities");
+
+		 String StrVer=resTest.asString();
+		 System.out.println("Azure_GetActivity="+StrVer);
+		 int statusCode=resTest.getStatusCode();
+		 System.out.println("Status Code ="+statusCode);
+
+		 JSONArray RessJSON=new JSONArray(StrVer);
+		 System.out.println("Length="+RessJSON.length());
+		 int length=RessJSON.length();
+		 
+		 for (int i=0;i<length;i++)
+		 {
+			 
+		 
+
+		 JSONObject stOBJ=(JSONObject) RessJSON.get(i);
+
+
+		// System.out.println("Title -"+stOBJ.get("title"));
+		 int id;
+		// String title=(String) stOBJ.get("title");
+		 String date="2021-10-07";
+		 String date1;
+		// boolean status= stOBJ.getBoolean("completed");
+		Assert.assertEquals( id=(Integer) stOBJ.get("id"), i+1,"Working ");
+		Assert.assertEquals(date1=(String) stOBJ.get("dueDate"), date);
+		
+	 }
+	
+	 }
+
+}

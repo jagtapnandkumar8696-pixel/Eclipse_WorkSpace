@@ -1,0 +1,10 @@
+package String;
+
+public class StrinFUnctions {
+
+	public static void main(String[] args) {
+		String str="Nandkumar Jagtap PunD CRG";
+		System.out.println(str.replace('d', 'D'));
+	}
+
+}

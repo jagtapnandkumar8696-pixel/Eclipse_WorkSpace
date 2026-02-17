@@ -1,0 +1,27 @@
+package Loops;
+
+public class FizBuzProgram {
+
+	public static void main(String[] args) {
+	int a=19;
+	if (a%5==0 && a%3==0)
+	{
+		System.out.println("a is fiz buz");
+		
+	}
+	else if(a%5==0)
+	{
+		System.out.println("a is fiz ");
+	}
+	else if(a%3==0)
+	{
+		System.out.println("a is buz ");
+	}
+	else
+	{
+		System.out.println("No");
+	}
+
+	}
+
+}

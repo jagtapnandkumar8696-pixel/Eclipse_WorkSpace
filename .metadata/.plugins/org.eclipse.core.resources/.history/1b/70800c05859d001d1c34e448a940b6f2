@@ -1,0 +1,23 @@
+package StringAndArray;
+
+public class Array_Revers {
+
+	public static void main(String[] args) {
+		int a[]=new int [5];
+		
+		for(int i:a)
+		{
+			a[i]=(int) (Math.random()*100);
+			System.out.print(a[i]);
+		}
+		System.out.println();
+		
+		for(int i=a.length;i<=0;i--)
+		{
+			System.out.print(a[i]);
+		}
+				
+				
+		}
+
+}

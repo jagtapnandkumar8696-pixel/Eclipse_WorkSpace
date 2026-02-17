@@ -1,0 +1,21 @@
+package String;
+
+public class StrinFUnctions {
+
+	public static void main(String[] args) {
+		String str="Nandkumar Jagtap Pune CRG";
+		System.out.println(str.replace('w', 'D'));//replace all occorance of characters
+		System.out.println(str.replace(str, "Test"));
+		System.out.println(str.replaceAll("Nandkumar", "Vedika"));//replace string 
+		System.out.println(str.replaceFirst("n", "b"));//replace first occurance of String
+		String str1="st12sttt5";
+		for(int i=0;i<str1.length();i++)
+		{
+			if(Character.isDigit(str1.charAt(i)))
+			{
+				System.out.println(str1.charAt(i));
+			}
+		}
+	}
+
+}

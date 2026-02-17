@@ -1,0 +1,57 @@
+package roughWork;
+
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.util.Properties;
+
+import org.openqa.selenium.WebDriver;
+
+public class BaseClass {
+	
+	public WebDriver driver;
+	public FileInputStream fis;
+	public Properties con=new Properties();
+	public Properties or=new Properties();
+
+public void login() throws IOException
+
+{
+	if (driver==null)
+	{
+		
+		fis=new FileInputStream (System.getProperty("user.dir")+"\\src\\test\\resources\\properties\\config.properties");
+		try 
+		{
+			con.load(fis);
+		}
+		catch(IOException e)
+		{
+			e.printStackTrace();
+		}
+		
+		fis=new FileInputStream (System.getProperty("user.dir")+"\\src\\test\\resources\\properties\\objectrepository.properties");
+		try 
+		{
+			or.load(fis);
+		}
+		catch(IOException e)
+		{
+			e.printStackTrace();
+		}
+		if (System.getProperty(browser)=="chrome")
+		{
+			
+		}
+	}
+	
+}
+
+public void tearDown()
+
+{
+	
+}
+
+
+}

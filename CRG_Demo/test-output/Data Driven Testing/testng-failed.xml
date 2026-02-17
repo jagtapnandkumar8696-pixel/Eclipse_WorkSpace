@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite thread-count="-1" name="Failed suite [Data Driven Testing]" guice-stage="DEVELOPMENT">
+  <listeners>
+    <listener class-name="org.uncommons.reportng.HTMLReporter"/>
+    <listener class-name="org.uncommons.reportng.JUnitXMLReporter"/>
+    <listener class-name="crg.Listeners.Customlisteners"/>
+  </listeners>
+  <test name="Test2(failed)">
+    <classes>
+      <class name="crg.TestCases.AddCustomer">
+        <methods>
+          <include name="setup"/>
+          <include name="addCustomer" invocation-numbers="0 1 2"/>
+        </methods>
+      </class> <!-- crg.TestCases.AddCustomer -->
+    </classes>
+  </test> <!-- Test2(failed) -->
+</suite> <!-- Failed suite [Data Driven Testing] -->

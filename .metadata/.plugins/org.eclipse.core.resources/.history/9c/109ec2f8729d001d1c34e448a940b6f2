@@ -1,0 +1,24 @@
+package StringAndArray;
+
+public class Array_Even_Odd_Numbers {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		int a[]= {23,45,76,32,2,5,87,99};
+		
+		for (int i:a)
+		{
+			if(a[i]%2==0)
+			{
+				System.out.println(a[i] + " is Prime No");
+			}
+			else
+			{
+				System.out.println(a[i] + "  is not Prime No");
+			}
+		}
+
+	}
+
+}

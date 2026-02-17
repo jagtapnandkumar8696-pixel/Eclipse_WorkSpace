@@ -1,0 +1,15 @@
+package crg.Testcase;
+
+import org.testng.annotations.Test;
+
+import io.restassured.RestAssured;
+
+public class Util {
+	@Test
+	public static void tokenGenerator()
+	{
+		RestAssured.baseURI="https://172.18.152.241:44360/MobileService";
+				
+	}
+
+}

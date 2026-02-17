@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite thread-count="-1" name="Failed suite [Grouping test]" guice-stage="DEVELOPMENT">
+  <test name="Test(failed)">
+    <groups>
+      <run>
+        <exclude name="functinal Test"/>
+      </run>
+    </groups>
+    <classes>
+      <class name="testng2.Assersion">
+        <methods>
+          <include name="asserttest1"/>
+          <include name="asserttest4"/>
+          <include name="asserttest3"/>
+        </methods>
+      </class> <!-- testng2.Assersion -->
+    </classes>
+  </test> <!-- Test(failed) -->
+</suite> <!-- Failed suite [Grouping test] -->

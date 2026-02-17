@@ -1,0 +1,16 @@
+package interfaceLearning;
+
+class Base {
+    public static void foo() { System.out.println("Base"); }
+}
+  
+class Derived extends Base {
+    public static  void foo() { System.out.println("Derived"); } 
+}
+  
+public class SUbClassPrivateMethod {
+    public static void main(String args[]) {
+    	Derived  b = new Derived();
+        b.foo();
+    }
+} 

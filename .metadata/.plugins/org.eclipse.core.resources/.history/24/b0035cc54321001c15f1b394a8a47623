@@ -1,0 +1,15 @@
+package crg.API;
+
+import io.restassured.RestAssured;
+import io.restassured.http.Method;
+import io.restassured.response.Response;
+import io.restassured.specification.RequestSpecification;
+
+public class FirstAPITest {
+	public void test()
+	{    Response sr=RestAssured.get("https://reqres.in/api/users/2");
+		String str=sr.asString();
+		System.out.println(str);
+	}
+
+}
