@@ -1,0 +1,30 @@
+package Array;
+
+public class mtltiDim_Array {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		int[][]a=new int [3][3];
+		for(int i=0;i<a.length;i++) 
+		{
+			for(int j=0;j<a[0].length;j++) 
+			{
+				a[i][j]=(int)(Math.random());
+			}
+			
+		}
+		
+		for(int i=0;i<a.length;i++) 
+		{
+			for(int j=0;j<a[0].length;j++) 
+			{
+				System.out.print(a[1][j] + " ");
+			}
+		System.out.println();
+			
+		}
+
+	}
+
+}
